@@ -11,6 +11,12 @@
 #undef TAPPING_TERM
 #define TAPPING_TERM 300
 
+// Used to set two different softwares for each half of a split keyboard. 
+#define EE_HANDS
+
+#define OLED_TIMEOUT 120000
+#define OLED_BRIGHTNESS 120
+
 // Prevent normal rollover on alphas from accidentally triggering mods.
 #define IGNORE_MOD_TAP_INTERRUPT
 

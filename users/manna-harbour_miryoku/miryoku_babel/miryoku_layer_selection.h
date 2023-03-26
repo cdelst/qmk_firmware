@@ -8,6 +8,7 @@
 
 #include "miryoku_layer_alternatives.h"
 
+
 #if !defined(MIRYOKU_LAYER_BASE)
   #if defined (MIRYOKU_LAYERS_FLIP)
     #if defined (MIRYOKU_ALPHAS_AZERTY)
@@ -275,3 +276,19 @@
 #if !defined(MIRYOKU_LAYERMAPPING_FUN)
   #define MIRYOKU_LAYERMAPPING_FUN MIRYOKU_MAPPING
 #endif
+
+#if !defined(MIRYOKU_LAYER_PROG)
+  #define MIRYOKU_LAYER_PROG MIRYOKU_LAYER_PROG
+#endif
+#if !defined(MIRYOKU_LAYERMAPPING_PROG)
+  #define MIRYOKU_LAYERMAPPING_PROG MIRYOKU_MAPPING
+#endif
+
+#if !defined(MIRYOKU_LAYER_PROGB)
+  #define MIRYOKU_LAYER_PROGB MIRYOKU_LAYER_PROGB
+#endif
+#if !defined(MIRYOKU_LAYERMAPPING_PROGB)
+  #define MIRYOKU_LAYERMAPPING_PROGB MIRYOKU_MAPPING
+#endif
+
+

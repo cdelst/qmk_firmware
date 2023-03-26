@@ -1,6 +1,8 @@
 # Copyright 2022 Manna Harbour
 # https://github.com/manna-harbour/miryoku
 
+SRC += features/custom_shift_keys.c
+
 # alternative layout options
 
 ifneq ($(strip $(MIRYOKU_ALPHAS)),)
