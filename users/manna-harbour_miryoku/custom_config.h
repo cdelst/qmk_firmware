@@ -21,7 +21,7 @@
       #define BASE_O LCTL_T(KC_O)
       #define GUI   KC_LCTL
       #define CTRL  KC_LGUI
-#endif 
+#endif
 
 
 
@@ -29,7 +29,7 @@
 KC_GRV,     KC_Q,              KC_W,              KC_F,              KC_P,              KC_B,                /**/     KC_J,              KC_L,              KC_U,              KC_Y,              KC_QUOT,                    KC_BSLS, \
 KC_LSFT,    BASE_A,            LALT_T(KC_R),      BASE_S,            LSFT_T(KC_T),      KC_G,                /**/     KC_M,              LSFT_T(KC_N),      BASE_E,            LALT_T(KC_I),      BASE_O,                     KC_SCLN, \
 GUI,        LT(U_BUTTON,KC_Z), ALGR_T(KC_X),      KC_C,              KC_D,              KC_V,                /**/     KC_K,              KC_H,              KC_COMM,           ALGR_T(KC_DOT),    LT(U_BUTTON,KC_SLSH),       KC_END, \
-U_NP,       U_NP,              U_NP,              LT(U_PROG,KC_ESC), LT(U_NAV,KC_SPC),  LT(U_MOUSE,KC_TAB),  /**/     LT(U_SYM,KC_ENT),  LT(U_NUM,KC_BSPC), LT(U_FUN,KC_DEL),  U_NP,              U_NP,                       U_NP
+U_NP,       U_NP,              U_NP,              LT(U_PROG,KC_ESC), LT(U_NAV,KC_SPC),  LSFT_T(KC_TAB),      /**/     LT(U_SYM,KC_ENT),  LT(U_NUM,KC_BSPC), LT(U_FUN,KC_DEL),  U_NP,              U_NP,                       U_NP
 
 #define MIRYOKU_LAYER_SYM \
 KC_NO,      KC_CIRC,           KC_AMPR,           KC_ASTR,           KC_LCBR,           KC_RCBR,             /**/     U_NA,              TD(U_TD_U_BASE),   TD(U_TD_U_EXTRA),  TD(U_TD_U_TAP),    TD(U_TD_BOOT),              KC_NO,  \
@@ -87,9 +87,9 @@ U_NP,       U_NP,              U_NP,              LT(U_MEDIA,KC_ESC),LT(U_NAV,KC
 
 #define MIRYOKU_LAYER_PROG \
 KC_NO,      TD(U_TD_BOOT),     TD(U_TD_U_TAP),    TD(U_TD_U_EXTRA),  TD(U_TD_U_BASE),   U_NA,                /**/     KC_LABK,           KC_EXLM,           KC_AMPR,           KC_ASTR,           KC_GRAVE,                   KC_NO,  \
-KC_NO,      GUI,               KC_LALT,           CTRL,              KC_LSFT,           MO(U_PROGB),         /**/     KC_QUOT,           KC_LPRN,           KC_LCBR,           KC_LBRC,           KC_SCLN,                    CUST_COLON_EQUAL,  \
+KC_NO,      GUI,               KC_LALT,           CTRL,              KC_LSFT,           U_NA,         /**/     KC_QUOT,           KC_LPRN,           KC_LCBR,           KC_LBRC,           KC_SCLN,                    CUST_COLON_EQUAL,  \
 KC_NO,      U_NA,              KC_ALGR,           TD(U_TD_U_NUM),    TD(U_TD_U_NAV),    U_NA,                /**/     KC_SLASH,          KC_EQUAL,          KC_MINUS,          KC_COMM,           KC_DOT,                     KC_QUES,  \
-U_NP,       U_NP,              U_NP,              U_NA,              MO(U_MEDIA),       U_NA,                /**/     KC_LSFT,           KC_BSPC,           KC_DEL,            U_NP,              U_NP,                       U_NP 
+U_NP,       U_NP,              U_NP,              U_NA,              MO(U_MEDIA),       U_NA,                /**/     MO(U_PROGB),           KC_BSPC,           KC_DEL,            U_NP,              U_NP,                       U_NP 
 
 #define MIRYOKU_LAYER_PROGB \
 KC_NO,      TD(U_TD_BOOT),     TD(U_TD_U_TAP),    TD(U_TD_U_EXTRA),  TD(U_TD_U_BASE),   U_NA,                /**/     KC_RABK,           KC_QUES,           KC_PIPE,           KC_CIRC,           KC_TILD,                    KC_NO,  \

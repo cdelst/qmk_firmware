@@ -9,7 +9,7 @@
 
 // default but used in macros
 #undef TAPPING_TERM
-#define TAPPING_TERM 300
+#define TAPPING_TERM 240
 
 // Used to set two different softwares for each half of a split keyboard. 
 #define EE_HANDS
