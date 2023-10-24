@@ -44,6 +44,7 @@ enum {
     U_TD_BOOT,
     U_SHFT_CAPS,
     U_BSPC_WORD,
+    U_CLN_SCLN,
 #define MIRYOKU_X(LAYER, STRING) U_TD_U_##LAYER,
     MIRYOKU_LAYER_LIST
 #undef MIRYOKU_X
@@ -64,9 +65,30 @@ void u_td_fn_boot(qk_tap_dance_state_t *state, void *user_data) {
 MIRYOKU_LAYER_LIST
 #undef MIRYOKU_X
 
+
+void dance_cln_finished (qk_tap_dance_state_t *state, void *user_data) {
+  if (state->count == 1) {
+    register_code (KC_RSFT);
+    register_code (KC_SCLN);
+  } else {
+    register_code (KC_SCLN);
+  }
+}
+
+void dance_cln_reset (qk_tap_dance_state_t *state, void *user_data) {
+  if (state->count == 1) {
+    unregister_code (KC_RSFT);
+    unregister_code (KC_SCLN);
+  } else {
+    unregister_code (KC_SCLN);
+  }
+}
+
+
 qk_tap_dance_action_t tap_dance_actions[] = {[U_TD_BOOT]   = ACTION_TAP_DANCE_FN(u_td_fn_boot),
                                              [U_SHFT_CAPS] = ACTION_TAP_DANCE_DOUBLE(KC_LSFT, KC_CAPS),
                                              [U_BSPC_WORD] = ACTION_TAP_DANCE_DOUBLE(KC_BSPC, LCTL(KC_BSPC)),
+                                             [U_CLN_SCLN]      = ACTION_TAP_DANCE_FN_ADVANCED (NULL, dance_cln_finished, dance_cln_reset),
 #define MIRYOKU_X(LAYER, STRING) [U_TD_U_##LAYER] = ACTION_TAP_DANCE_FN(u_td_fn_U_##LAYER),
                                              MIRYOKU_LAYER_LIST
 #undef MIRYOKU_X
